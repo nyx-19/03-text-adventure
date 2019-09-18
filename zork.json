@@ -17,12 +17,12 @@
         "map": "QUIT"
       },
       {
-        "v": "NORTH",
-        "map": "NORTH"
+        "v": "leave elevator",
+        "map": "LOBBY"
       },
       {
-        "v": "N",
-        "map": "NORTH"
+        "v": "L",
+        "map": "LOBBY"
       },
       {
         "v": "SOUTH",
@@ -134,13 +134,13 @@
       }
     ],
     "rooms": {
-      "WHOUS": {
-        "name": "West of House",
-        "desc": "This is an open field west of a white house, with a boarded front door.",
+      "INELEV": {
+        "name": "back of an elevator.",
+        "desc": "The insides seem old and decrepid, like this building has been out of commission for decades, but you remember entering the elevator just moments ago before the ligths went out.",
         "exits": [
           {
-            "verb": "NORTH",
-            "target": "NHOUS",
+            "verb": "leave elevator",
+            "target": "LOBBY",
             "condition": ""
           },
           {
@@ -159,10 +159,10 @@
             "condition": ""
           }
         ],
-        "inventory": []
+        "inventory": ["mailbox"]
       },
-      "NHOUS": {
-        "name": "North of House",
+      "LOBBY": {
+        "name": "Main lobby",
         "desc": "You are facing the north side of a white house.  There is no door here,\r\nand all the windows are barred.",
         "exits": [
           {
