@@ -1,0 +1,138 @@
+{
+    "verbs": [
+      { "v": "EXITS",    "map": "EXITS" },
+      { "v": "QUIT",     "map": "QUIT"  },
+      { "v": "LEAVE",    "map": "LEAVE" },
+      { "v": "ELEVATOR", "map": "ELEVATOR" },
+      { "v": "PANNEL",   "map": "PANNEL" },
+      { "v": "NO",       "map": "NO" },
+      { "v": "DESK",     "map": "DESK"  },
+      { "v": "YES",      "map": "YES"  },
+      { "v": "CLOSET",   "map": "CLOSET"  },
+      { "v": "ENTER",    "map": "ENTER"  },
+      { "v": "CRAWL",    "map": "CRAWL" }
+    ],
+
+    "rooms": {
+      "LOC1": {
+        "name": "elevator.",
+        "desc": "You are standing in an elevator that looks decrepid as though it has been out of service for years. That's strange considering it looked normal before the lights cut out.",
+        "exits": [
+          {
+            "verb": "LEAVE",
+            "target": "LOC2",
+            "condition": ""
+          },
+          {
+            "verb": "PANNEL",
+            "target": "LOC3",
+            "condition": ""
+          },
+          {
+            "verb": "LOBBY",
+            "target": "LOC2",
+            "condition": ""
+          }
+         
+        ],
+        "inventory": []
+      },
+      "LOC2": {
+        "name": "main lobby.",
+        "desc": "The lobby looks to be equally as run down. There are plants growing from every crack in the floor. The front door is boarded up, the reception desk you had checked into when you first arrived is covered in dust, and down the corridor you spot the maintenance closet slightly ajar.",
+        "exits": [
+          {
+            "verb": "DESK",
+            "target": "LOC4",
+            "condition": ""
+          },
+          {
+            "verb": "ELEVATOR",
+            "target": "LOC1",
+            "condition": ""
+          },
+          {
+            "verb": "CLOSET",
+            "target": "LOC5",
+            "condition": ""
+          }
+        ],
+        "inventory": []
+      },
+      "LOC3": {
+        "name": "control pannel.",
+        "desc": "The buttons are mostly smashed and broken. You could try pressing one, but you don't feel like being electrecuted today.",
+        "exits": [
+          {
+            "verb": "LEAVE",
+            "target": "LOC2",
+            "condition": ""
+          }
+        ],
+        "inventory": []
+      },
+      "LOC4": {
+        "name": "cubicle for the reception desk.",
+        "desc": "There is very little back here. What few files and papers are still here have been thrown around in a hurry. You see a small discrete button on the edge of the desk. Do you push it?",
+        "exits": [
+          {
+            "verb":"LOBBY",
+            "target": "LOC2",
+            "condition": ""
+          },
+          {
+            "verb":"NO",
+            "target": "LOC4",
+            "condition": ""
+          },
+          {
+            "verb":"YES",
+            "target": "END2",
+            "condition": ""
+          }
+        ],
+        "inventory": []
+      },
+      "LOC5": {
+        "name": "maintenance closet.",
+        "desc": "The miatenance closet is what you image the closet would have looked like before what ever happened here happened. Brooms, mops, and various cleaning supplise line the shelves. When you look behind the door though, there is a small crawl space.",
+        "exits": [
+          {
+            "verb":"LOBBY",
+            "target": "LOC2",
+            "condition": ""
+          },
+          {
+            "verb": "CRAWL",
+            "target": "LOC6",
+            "condition": ""
+          }
+        ],
+        "inventory": []
+       },
+      "LOC6": {
+        "name": "crawl space.",
+        "desc": "The inside of the crawl space is very long but you can see light coming from the other side. There is distant murmers coming from the other side. You can't tell if it is leading outside or somewhere else.",
+        "exits": [
+          {
+            "verb": "ENTER",
+            "target": "END1",
+            "condition": ""
+          }
+        ],
+        "inventory": []
+       },
+       "END1": {
+         "name": "fall-out bunker.",
+         "desc": "Immediately after you step into the large underground bunker, you are met with a collony of survivors ready to take you in as a refugee. They tell you that you must have hit your head because you have forgotten about the neuclear fall out happening just outside. Had you gone outside, you would have died from the intense radiation. You made it to safety; you survived.",
+         "exits": [],
+         "inventory": []
+       },
+       "END2": {
+         "name": "outside.",
+         "desc": "A hidden door near the front of the lobby swishes open quickly. It leads outside. When you step out, however; the whole city looks just as overgrown and it's very hot despite the lack of sun. There are pools of sludge in the streets that you don't even consider getting near. You start walking throught the deserted streets, but you don't last long. You have died to the radiation polution all around you.",
+         "exits": [],
+         "inventory": []
+       }
+    }
+}

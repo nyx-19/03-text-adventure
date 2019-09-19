@@ -32,10 +32,10 @@ def update(response,game,current):
 def main():
 
     game = {}
-    with open('zork.json') as json_file:
+    with open('game.json') as json_file:
         game = json.load(json_file)
 
-    current = 'INELEV'
+    current = 'LOC1'
 
     quit = False
 
