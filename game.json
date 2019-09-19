@@ -27,13 +27,9 @@
             "verb": "PANNEL",
             "target": "LOC3",
             "condition": ""
-          },
-          {
-            "verb": "LOBBY",
-            "target": "LOC2",
-            "condition": ""
+          
           }
-         
+
         ],
         "inventory": []
       },

@@ -1,2 +1,2 @@
 # 03-text-adventure
-this is the text adventure game
+this is my text adventure game where you explore an abandoned main floor of a building. The point of this assignment was to exersise my ability to use verbs to lead the user to new "locations" which is a new set of descriptions for a room. I wanted to switch over to the other main document instead of the simple one, but it messed with one of my rooms and how I had set up my endings. I had only wanted it so that I could have the check exits function, but having the file open can tell you what options you have.
